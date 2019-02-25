@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <h3>报告图表</h3>
+    <h3>图表</h3>
     <div class="jumbotron">
 
         <div class="row">
