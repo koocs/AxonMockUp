@@ -1,0 +1,653 @@
+/* HTML & BODY */
+html, body
+{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-family: Segoe UI, Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #555555;
+}
+
+
+/* GENERAL TABLE */
+table, table th, table tr, table td
+{
+    padding: 0px;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+
+/* MASTER HOLDER */
+table.master_holder
+{
+    width: 1100px;
+}
+table.master_holder, table.master_holder th, table.master_holder tr, table.master_holder td
+{
+    padding: 0px;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+table.master_holder th.padding_top, table.master_holder tr.padding_top, table.master_holder td.padding_top
+{
+    padding-top:15px;
+}
+table.master_holder th.padding_bottom, table.master_holder tr.padding_bottom, table.master_holder td.padding_bottom
+{
+    padding-bottom:15px;
+}
+table.master_content_holder
+{
+    width: 90%;
+}
+table.master_content_padding
+{
+    width: 92%;
+}
+table.master_content_padding th, table.master_content_padding tr, table.master_content_padding td
+{
+    padding:0px 10px;
+}
+
+
+/* TOP BAR */
+td.top_bar
+{
+    height:40px;
+    width: 100%;
+    font-family: Segoe UI, Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    padding:0px;
+    background-color: #3a3a3a;
+}
+td.top_bar table.content
+{
+    width: 90%;
+}
+td.top_bar table.login
+{
+    width: 600px;
+}
+td.top_bar table.myacc th, td.top_bar table.myacc tr, td.top_bar table.myacc td
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+td.top_bar a, td.top_bar a:link, td.top_bar a:active, td.top_bar a:visited
+{
+    font-size: 11px;
+    color: #cccccc;
+    text-decoration: underline;
+    cursor: pointer;
+}
+td.top_bar a:hover
+{
+    color: #ffffff;
+}
+
+
+/* LOGO & MENUS */
+td.logo_menu
+{
+    height:70px;
+    width: 100%;
+    font-family: Trebuchet MS, Segoe UI, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4f4f4f;
+    background-color: #ffffff;
+}
+td.logo_menu table.content
+{
+    width: 97%;
+}
+td.logo_menu table.menus th, td.logo_menu table.menus tr, td.logo_menu table.menus td
+{
+    padding: 0px;
+}
+
+
+/* CONTENT */
+table.master_holder td.master_content
+{
+    padding:0px;
+    padding-bottom:10px;
+}
+
+
+/* LANGUAGE */
+.languages_holder
+{
+    position: relative;
+    width: 140px;
+    left: 15px;
+    z-index: 10;
+}
+.languages_holders
+{
+    position: relative;
+    width: 140px;
+    margin:auto;
+    z-index: 10;
+}
+.language_holder
+{
+    position: absolute;
+    width: 140px;
+    top: -24px;
+    left: -21px;
+    z-index: 0;
+}
+.languages_holder2
+{
+    position: relative;
+    width: 140px;
+    top: 20px;
+    left: 200px;
+    z-index: 10;
+}
+.language_holder2
+{
+    position: absolute;
+    width: 140px;
+    top: -24px;
+    left: -21px;
+    z-index: 0;
+}
+.language_holder_bg
+{
+    position: absolute;
+    width: 140px;
+    height: 25px;
+    top: -12px;
+    left: -3px;
+    background-image: url(../images/numoptions/buttons/bg_topbar.png);
+    z-index: 0;
+}
+#lang_holder ul
+{
+    position: absolute;
+    top:22px;
+    left:0px;
+    width: 132px;
+    display: none;
+    margin-top: 2px;
+    margin-left: -46px;
+    padding: 3px 2px;
+    list-style: none;
+    background-color: #ffffff;
+    border: solid 1px #bebebe;
+    border-radius:3px;
+}
+#lang_holder li
+{
+    position: relative;
+    top:0px;
+    left:20px;
+    width: 136px;
+    height: 24px;
+    float: left;
+    display: block;
+    font-family: Segoe UI, Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #6e6e6e;
+    z-index: 10;
+    margin: 0px;
+    padding: 0px;
+    left: -2px;
+}
+#lang_holder li ul
+{
+    left: 27px;
+}
+#lang_holder li ul li
+{
+    width: 138px;
+}
+#lang_holder a, 
+#lang_holder li ul li a, 
+#lang_holder li ul li a:link, 
+#lang_holder li ul li a:active, 
+#lang_holder li ul li a:visited
+{
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: left;
+    color: #6e6e6e;
+    padding: 5px 2px;
+    padding-top:4px;
+    cursor: pointer;
+}
+div.lang_opt_holder
+{
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    height: 24px;
+}
+div.lang_opt_holder_1
+{
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    padding: 0px;
+    z-index: 10;
+}
+div.lang_opt_holder_2
+{
+    position: absolute;
+    width: 136px;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    padding-left: 4px;
+    padding-top: 4px;
+    z-index: 0;
+}
+div.lang_opt_holder_3
+{
+    position: absolute;
+    width: 132px;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    padding-left: 2px;
+    padding-top: 0px;
+    z-index: 0;
+}
+#lang_holder li ul a:hover
+{
+    background-color: #eeeeee;
+    text-decoration: none;
+    border-radius:2px;
+}
+.datetime
+{
+    position: absolute;
+    top: 12px;
+    left: 350px;
+    z-index: 10;
+}
+
+
+/* BOTTOM LINKS */
+td.bottom_links
+{
+    height: 80px;
+    width: 100%;
+    font-family: Segoe UI, Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+    background-image: url(../images/numoptions/background/master_bottom_link_bg.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+}
+td.bottom_links img
+{
+    height: 20px;
+    width: 20px;
+}
+td.bottom_links table.content
+{
+    width: auto;
+}
+td.bottom_links table th, td.bottom_links table tr, td.bottom_links table td
+{
+    padding: 2px 10px;
+}
+td.bottom_links table.content table th, td.bottom_links table.content table tr, td.bottom_links table.content table td
+{
+    padding: 0px 3px;
+}
+td.bottom_links table.content table.links
+{
+	width:100%;
+}
+td.bottom_links table.content table.links th, td.bottom_links table.content table.links tr, td.bottom_links table.content table.links td
+{
+    padding:0px 5px;
+    text-align:center;
+}
+td.bottom_links a, td.bottom_links a:link, td.bottom_links a:active, td.bottom_links a:visited
+{
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+td.bottom_links a:hover
+{
+    color: #ff5555;
+}
+
+
+/* BOTTOM PARTNERS */
+td.bottom_partners
+{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color:#f8f8f8;
+    background-image: url(../images/numoptions/background/master_bottom_partners_bg.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+
+/* BOTTOM TEXT */
+td.bottom_text
+{
+    width: 100%;
+    font-family: Segoe UI, Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #444444;
+    background-color: #ffffff;
+}
+td.bottom_text table.content
+{
+    width: 100%;
+}
+td.bottom_text table.content th, td.bottom_text table.content tr, td.bottom_text table.content td
+{
+    padding: 0px;
+}
+td.bottom_text a, td.bottom_text a:link, td.bottom_text a:active, td.bottom_text a:visited
+{
+    color: #444444;
+    text-decoration: none;
+    cursor: pointer;
+}
+td.bottom_text a:hover
+{
+    color: #78bd00;
+}
+
+
+/* OVERLAY */
+.container_holder, div.container_holder
+{
+    width: 100%;
+    height: 100%;
+}
+.overlay_container, div.overlay_container
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: Gray;
+    filter: alpha(opacity=65);
+    -moz-opacity: 0.65; /*  It is for Mozilla firefox browser   */
+    opacity: 0.65;
+    z-index: 10000000;
+}
+
+
+/* LOADER */
+.loader
+{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    z-index: 100000;
+}
+
+
+/* IMAGE SLIDER */
+#image_slider
+{
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+#image_slider ul
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 485px;
+    list-style: none;
+}
+
+#image_slider ul li
+{
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 1100px;
+    height: 485px;
+    background: #eeeeee;
+    text-align: center;
+    line-height: 300px;
+}
+
+a.control_prev, a.control_next
+{
+    position: absolute;
+    top: 45%;
+    z-index: 999;
+    display: block;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+a.control_prev
+{
+    left: 10px;
+    background-image: url(../images/numoptions/buttons/btn_slider_prev.png);
+}
+
+a.control_next
+{
+    right: 10px;
+    background-image: url(../images/numoptions/buttons/btn_slider_next.png);
+}
+
+a.control_prev:hover
+{
+    background-image: url(../images/numoptions/buttons/btn_slider_prev_mo.png);
+}
+
+a.control_next:hover
+{
+    background-image: url(../images/numoptions/buttons/btn_slider_next_mo.png);
+}
+
+
+
+/* VERIFICATION */
+table.table_verification, table.table_verification th, table.table_verification tr, table.table_verification td
+{
+    padding:0px;
+}
+td.verification_0, div.verification_0
+{
+    display:none;
+}
+td.verification_1, div.verification_1
+{
+    display:block;
+    width:30px;
+    height:30px;
+	background-image:url(../images/verification/bg/bg1.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+td.verification_2, div.verification_2
+{
+    display:block;
+    width:30px;
+    height:30px;
+	background-image:url(../images/verification/bg/bg2.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+td.verification_3, div.verification_3
+{
+    display:block;
+    width:30px;
+    height:30px;
+	background-image:url(../images/verification/bg/bg3.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+td.verification_4, div.verification_4
+{
+    display:block;
+    width:30px;
+    height:30px;
+	background-image:url(../images/verification/bg/bg4.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+td.verification_5, div.verification_5
+{
+    display:block;
+    width:30px;
+    height:30px;
+	background-image:url(../images/verification/bg/bg5.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+td.verification_holder, div.verification_holder
+{
+    position:relative;
+    width:200px;
+    height:35px;
+}
+td.verification_holder img, div.verification_holder img
+{
+    width:16px;
+}
+td.verification_overlay, div.verification_overlay
+{
+    position:absolute;
+    top:-1px;
+    left:-1px;
+    width:202px;
+    height:37px;
+    z-index:100;
+}
+td.verification_overlay img, div.verification_overlay img 
+{
+    width:202px;
+    height:37px;
+}
+td.verification_bg1, div.verification_bg1,
+td.verification_bg2, div.verification_bg2,
+td.verification_bg3, div.verification_bg3
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:200px;
+    height:35px;
+    padding:0px;
+    vertical-align:middle;
+    text-align:center;
+    border:solid 1px #cccccc;
+	background-repeat:no-repeat;
+	background-position:center;
+	z-index:0;
+}
+td.verification_bg1, div.verification_bg1
+{
+	background-image:url(../images/verification/veri_bg/veri_bg1.jpg);
+}
+td.verification_bg2, div.verification_bg2
+{
+	background-image:url(../images/verification/veri_bg/veri_bg2.jpg);
+}
+td.verification_bg3, div.verification_bg3
+{
+	background-image:url(../images/verification/veri_bg/veri_bg3.jpg);
+}
+div.verification_div
+{
+    height:35px;
+}
+input.text_uppercase
+{
+    text-transform:uppercase;
+}
+
+
+
+
+div.security_code_holder
+{
+    position:relative;
+    width:120px;
+    height:22px;
+    padding:0px;
+}
+div.security_code_bg
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:120px;
+    height:22px;
+    padding:0px;
+    vertical-align:middle;
+    text-align:center;
+    border:solid 1px #ccc;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-image:url(../images/verification/veri_bg/veri_bg1.jpg);
+	z-index:0;
+}
+div.security_code_bg table
+{
+    height:100%;
+}
+div.security_code_bg table, div.security_code_bg table th, div.security_code_bg table tr, div.security_code_bg table td
+{
+    padding:0px;
+    vertical-align:middle;
+}
+div.security_code_overlay
+{
+    position:absolute;
+    top:-1px;
+    left:-1px;
+    width:124px;
+    height:26px;
+    z-index:100;
+}
+div.security_code_overlay img 
+{
+    width:124px;
+    height:26px;
+}
+
+
+
+

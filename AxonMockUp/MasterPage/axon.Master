@@ -1,0 +1,500 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="axon.master.vb" Inherits="AxonMockUp.axon" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Axon - Bootstrap Admin Theme</title>
+
+    <%--  <link rel="stylesheet" type="text/css" href="../css/template.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery/jquery-cms.css" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/numoptions_master.css" rel="stylesheet" type="text/css" />--%>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/menuCss/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <%--<script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.18.custom.min.js"></script>--%>
+    <script type="text/javascript" src="../Scripts/jquery/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript">
+        jQuery.browser = {};
+        (function () {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0;
+            if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                jQuery.browser.msie = true;
+                jQuery.browser.version = RegExp.$1;
+            }
+        })();
+    </script>
+    <%--<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+
+        i {
+            margin-right:10px;
+        }
+
+        .pull-bottom {
+            display: inline-block;
+            vertical-align: bottom;
+            float: none;
+        }
+
+        table.chn, tr.chn, td.chn, th.chn, div.chn, a.chn, a:link.chn, a:active.chn, a:visited.chn, input.chn, select.chn, .chn {
+            font-family: Arial Unicode MS, SimHei, SimSun;
+            letter-spacing: 2px;
+        }
+
+        input.btnLang {
+            width: 134px;
+            height: 24px;
+            font-family: Segoe UI;
+            font-size: 12px;
+            text-align: left;
+            padding-left: 53px;
+            background-color: Transparent;
+            background-position: 30px 7px;
+            background-repeat: no-repeat;
+            border: Transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #888888;
+        }
+
+            input.btnLang:hover {
+                background-color: #eee;
+                margin-left: 20px;
+                background-position: 10px 7px;
+                padding-left: 33px;
+            }
+
+        input.btnLangEng {
+            background-image: url(../images/lang_eng.jpg);
+        }
+
+        input.btnLangChn {
+            background-image: url(../images/lang_chn.jpg);
+            font-family: Arial Unicode MS, SimHei, SimSun;
+        }
+
+        input.btnLangInd {
+            background-image: url(../images/lang_ind.jpg);
+        }
+
+        table th, table td {
+            white-space: nowrap;
+        }
+
+        td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            padding: 0;
+            letter-spacing: 0;
+        }
+
+        .fontColor {
+            color: #8D6E63;
+        }
+
+        .disabled {
+            /* if you also want it to fade a bit:  
+       opacity: 0.5
+    */
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .sidebar {
+            position: fixed;
+            border-radius: 0;
+            height: 100%;
+            /*overflow-y: scroll;*/
+        }
+
+        body {
+            padding-top: 60px;
+        }
+        /*#mainMenu.active {
+            margin-left: -250px;
+        }*/
+
+        #sidebarCollapse:hover {
+            background-color: #EEEEEE;
+            border-radius: 50%;
+        }
+
+        .nav li.active > a {
+            background-color: #BDBDBD;
+            color: #FFFFFF;
+        }
+
+            .nav li.active > a > i {
+                color: red;
+            }
+
+        .gridview {
+            width: 530px;
+        }
+
+        @media (max-width: 768px) {
+            .welcome {
+                font-size: 7px;
+            }
+
+            .accType {
+                font-size: 7px;
+            }
+
+            /* horizontal scrollbar for tables if mobile screen */
+            table {
+                table-layout: fixed;
+                /*width: 150px;*/
+            }
+        }
+
+        @media (min-width:768px) {
+            .navbar-collapse {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .welcome {
+                font-size: 7px;
+            }
+
+            .accType {
+                font-size: 7px;
+            }
+
+            /* horizontal scrollbar for tables if mobile screen */
+            table {
+                table-layout: fixed;
+                /*width: 150px;*/
+            }
+
+            .gridview {
+                width: 450px;
+            }
+
+            .navbar-top-links {
+                top: 0;
+                float: none;
+                margin: 0 auto;
+                display: table;
+                table-layout: fixed;
+            }
+
+            .sidebar {
+                position: static;
+                border-radius: 0;
+                height: 100%;
+                /*overflow-y: hidden;*/
+            }
+
+            #sidebarCollapse {
+                display: none;
+            }
+
+            body {
+                padding-top: 110px;
+            }
+
+            .fontSizeMedium {
+                font-size: 10px;
+            }
+
+            .fontSizeSmall {
+                font-size: 7px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .welcome {
+                font-size: 7px;
+            }
+
+            .accType {
+                font-size: 7px;
+            }
+
+
+            .gridview {
+                width: 310px;
+            }
+
+            .fontSizeMedium {
+                font-size: 8px;
+            }
+
+            .fontSizeSmall {
+                font-size: 8px;
+            }
+
+            body {
+                padding-top: 110px;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            .welcome {
+                font-size: 5px;
+            }
+
+            .accType {
+                font-size: 5px;
+            }
+
+
+            .gridview {
+                width: 290px;
+            }
+
+            .fontSizeMedium {
+                font-size: 7px;
+            }
+
+            .fontSizeSmall {
+                font-size: 5px;
+            }
+
+            body {
+                padding-top: 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data" method="post">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="600">
+        </asp:ScriptManager>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a id="sidebarCollapse" class="navbar-brand btn btn-secondary">
+                        <i class="fa fa-navicon fa-1x fa-fw" style="color: #BDBDBD;" data-toggle="tooltip" data-placement="bottom" title="Main Menu"></i>
+                    </a>
+
+                    <a class="navbar-brand" href="../baseMyAcc/Home.aspx">
+                        <asp:Image ID="imgLogo" runat="server" Style="margin: 3px; margin-top: -6px; width: 180px" /></a>
+
+                </div>
+                <!-- /.navbar-header -->
+
+                <ul class="nav navbar-top-links navbar-right">
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <asp:Image ID="imglang" runat="server" ImageUrl="../images/lang_eng.jpg" />
+                            <asp:Label ID="lblLang" runat="server" CssClass="fontSizeSmall" Text="&nbsp;&nbsp;English"></asp:Label>
+                            <i class="fa fa-caret-down fontSizeSmall"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-language">
+                            <li>
+                                <asp:Button ID="btnLangEng" runat="server" Text="English" CausesValidation="false"
+                                    CssClass="btnLang btnLangEng" />
+                            </li>
+                            <li>
+                                <asp:Button ID="btnLangChn" runat="server" Text="简体中文" CausesValidation="false" CssClass="btnLang btnLangChn" />
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+
+                    <li class="text-muted">
+                        <asp:Label ID="lblWelcome" CssClass="fontSizeMedium" runat="server" Text="Welcome, "></asp:Label>
+                        <asp:Label ID="lblUserID" CssClass="fontSizeMedium" runat="server"></asp:Label>
+                    </li>
+
+                    <!-- /.dropdown -->
+                    <!-- /.dropdown -->
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw fontSizeSmall"></i><i class="fa fa-caret-down fontSizeSmall"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <asp:LinkButton
+                                    ID="lnkbtnMyDetail" runat="server" CausesValidation="false" Text="My Details"></asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton
+                                    ID="lnkbtnLogout" runat="server" CausesValidation="false" Text="Logout"></asp:LinkButton>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation" id="mainMenu">
+                    <div class="sidebar-nav navbar-collapse" id="sidebar_div">
+                        <ul class="nav" id="sidemenu" runat="server">
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+
+            <div id="page-wrapper" class="container-fluid">
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+    </form>
+
+    <script type="text/javascript">
+
+        $j = jQuery.noConflict();
+        $j(document).ready(function ($) {
+
+            var lastWidth;
+
+            $(window).resize(function (e) {
+
+                lastWidth = $(window).width();
+
+                var classname = $('#mainMenu').attr('class');
+
+                if (classname === 'navbar-default sidebar active') {
+
+                    $('#page-wrapper').css('margin-left', '-5px');
+                    $('#page-wrapper').css('width', lastWidth + 'px');
+
+                } else {
+
+                    if (lastWidth < 768) {
+
+                        $('#page-wrapper').css('margin-left', '-5px');
+
+                    } else {
+                        $('#page-wrapper').css('margin-left', '250px');
+                        lastWidth = lastWidth - 250;
+
+                    }
+
+                    $('#page-wrapper').css('width', lastWidth + 'px');
+
+                }
+
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+
+                var classname = $('#mainMenu').attr('class');
+                var Width = $(window).width();
+                if (classname === 'navbar-default sidebar active') {
+
+                    Width = Width - 250;
+
+                    $('#mainMenu').toggleClass('active');
+
+                    $('#page-wrapper').css('margin-left', '250px');
+                    $('#page-wrapper').css('width', Width + 'px');
+                    //$('#mainMenu').animate({ width: 'toggle' }, 300);
+
+                    $('#mainMenu').animate({
+                        left: '0px'
+                    }, 500, 'easeOutQuint');
+
+
+
+                } else {
+
+                    $('#page-wrapper').css('margin-left', '-5px');
+
+                    $('#mainMenu').toggleClass('active');
+                    $('#page-wrapper').css('width', Width + 'px');
+                    //$('#mainMenu').animate({ width: 'toggle' }, 300);
+
+                    $('#mainMenu').animate({
+                        left: '-250px'
+                    }, 500, 'easeOutBack');
+                }
+            });
+
+            //disable double clicked
+            $("li").click(function (e) {
+
+                var clickedLi = $(this);
+
+                clickedLi.addClass('disabled');
+
+                setTimeout(function () {
+
+                    clickedLi.removeClass('disabled');
+
+                }, 500);
+
+            });
+
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+        });
+
+    </script>
+
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <%--<script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.4.0/chartjs-plugin-streaming.min.js"></script>--%>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/MenuJs/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+﻿body {
+}
+
+@media screen and (max-width:768px) {
+    .mtSection {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .btnUp {
+        margin-top: -40px;
+    }
+
+    .txt_Msg{
+        margin-top: 35px;
+    }
+
+    .txt_Reply{
+        margin-top:40px;
+    }
+
+    .mtSection {
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (min-width:990px) {
+    .ml {
+        margin-left: 10px;
+    }
+
+    .ml-1 {
+        margin-left: 34px;
+    }
+
+    .mlc{
+        margin-left:20px;
+    }
+
+    .mlc-1{
+        margin-left: 63px;
+    }
+
+    .mtSection {
+        margin-top: 50px;
+    }   
+}
+
+@media screen and (min-width:1200px){
+    .ml{
+        margin-left:10px;
+    }
+
+    .ml-1{
+        margin-left:34px;
+    }
+}
+
+@media screen and (max-with:980px){
+    .ml,.ml-1{
+        margin-left:0px;
+    }
+}
+
+
+@media screen and (min-width:1065px){
+    .txtFiletype{
+        margin-top:10px;   
+    }
+} 
+
+.mt{
+    margin-top:10px;
+}
+
+.mt-05{
+    margin-top:5px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3{
+    margin-top:30px;
+}
+
+.mt-4{
+    margin-top:40px;
+}
+
+.mt-5{
+    margin-top:50px;
+}
+
+.mb-2{
+    margin-bottom:20px;
+}
+
+.mr{
+    margin-right:10px;
+}
+
+.mr-2{
+    margin-right:20px;
+}
+
+.mr-3{
+margin-left:-300px;
+}
+
+.marr-3{
+    margin-right:30px;
+}
+
+.moveleft-1{
+    margin-left: -10px;
+}
+
+.moveleft-2{
+    margin-left:-20px;
+}
+
+.moveleft-3{
+    margin-left:-30px;
+}
+
+.float-right{
+    float:right;
+}
+
+.pb{
+    padding-bottom:10px;
+}
+
+.pb-2{
+    padding-bottom:20px;
+}
+
+.borderBtm {
+    border-bottom: dotted 1px #5db000;
+}
+
+.investor {
+    color: #63c000;
+    text-shadow: 1px 1px #fff;
+    font-weight:bold;
+}
+
+.investor-lower {
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 1px 1px #fff;
+    font-weight:bold;
+}
+
+.display-inline{
+    display:inline;
+}
+
+.pageCon{
+    display:inline-block;
+    list-style:none;
+    /*margin-left:-38px;*/
+    padding:0px;
+}
+
+.pageCon > li {
+   display: inline-block;
+}
