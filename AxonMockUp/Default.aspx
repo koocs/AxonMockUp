@@ -2,10 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <h3>图表</h3>
     <div class="jumbotron">
-
         <div class="row">
             <div class="col-md-12">
                 <table class="nav">
