@@ -68,6 +68,7 @@
                         <div class="form-group col-md-12 col-sm-12">
                             <asp:Label ID="lbl_lUserID" runat="server" Text="日程类型"></asp:Label>
                             <asp:DropDownList CssClass="form-control mt-05" ID="DropDownList1" runat="server" ValidationGroup="Personal">
+                                <asp:ListItem>工作安排</asp:ListItem>
                             </asp:DropDownList>
                         </div>
 
@@ -162,19 +163,6 @@
                             相关文档
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            相关客户
-                            <div class="input-group">
-                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-default">
                                         <i class="glyphicon glyphicon-search"></i>
