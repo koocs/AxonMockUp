@@ -19,7 +19,7 @@
     <link href="../css/numoptions_master.css" rel="stylesheet" type="text/css" />--%>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="../vendor/menuCss/metisMenu.min.css" rel="stylesheet">
@@ -54,6 +54,10 @@
     </asp:ContentPlaceHolder>
 
     <style type="text/css">
+        body{
+            font-family: SimHei;
+            Font-Size: 15px;
+        }
 
         i {
             margin-right:10px;

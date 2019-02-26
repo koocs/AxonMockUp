@@ -21,11 +21,6 @@
             height: 30px;
         }
 
-        .styleChinese {
-            font-family: KaiTi;
-            Font-Size: 21px;
-        }
-
         .mt-05 {
         }
 
@@ -54,6 +49,14 @@
         <div class="row">
             <asp:Label ID="lblSubmitPersonal" runat="server" Text="" Style="margin-left: 30px; font-style: italic; font-weight: bold"></asp:Label>
         </div>
+        <div class="container-fluid mt">
+            <div class="row">
+                <div class="form-group float-right">
+                    <asp:Button ID="btnUpdatePersonal" runat="server" class="btn btn-success" Text="Update" ValidationGroup="Personal" />
+                    <asp:Button ID="btnClearPersonal" runat="server" CausesValidation="False" class="btn btn-success" Text="Clear" />
+                </div>
+            </div>
+        </div>
 
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -63,7 +66,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="form-group col-md-12 col-sm-6">
-                            <asp:Label CssClass="styleChinese" ID="lbl_lUserID" runat="server" Text="日程类型"></asp:Label>
+                            <asp:Label ID="lbl_lUserID" runat="server" Text="日程类型"></asp:Label>
                             <asp:DropDownList CssClass="form-control mt-05" ID="DropDownList1" runat="server" ValidationGroup="Personal">
                             </asp:DropDownList>
                         </div>
@@ -82,46 +85,57 @@
 
                         <div class="form-group col-md-12 col-sm-6">
                             紧急程度<asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem>一般</asp:ListItem>
-                                <asp:ListItem>重要</asp:ListItem>
-                                <asp:ListItem>紧急</asp:ListItem>
+                                <asp:ListItem>&nbsp;一般&nbsp;</asp:ListItem>
+                                <asp:ListItem>&nbsp;重要&nbsp;</asp:ListItem>
+                                <asp:ListItem>&nbsp;紧急&nbsp;</asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
-
-                        <div class="form-group col-md-12 col-sm-6">
-                            开始日期, 时间<asp:TextBox ID="txtID" runat="server" CssClass="form-control mt-05" MaxLength="50" ValidationGroup="Personal"></asp:TextBox>
+                        <div class="col-sm-6 form-group">
+                            开始日期, 时间
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-calendar"></i>
+                                    </button>
+                                </span>
+                                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-clock-o"></i>
+                                    </button>
+                                </span>
+                            </div>
                         </div>
-
-                        <div class="form-group col-md-12 col-sm-6">
-                            结束日期, 时间<asp:TextBox ID="txtContactNo" runat="server" CssClass="form-control mt-05" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                        <div class="col-sm-6 form-group">
+                            结束日期, 时间
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-calendar"></i>
+                                    </button>
+                                </span>
+                                <asp:TextBox ID="TextBox10" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-clock-o"></i>
+                                    </button>
+                                </span>
+                            </div>
                         </div>
-
                         <div class="form-group col-md-12 col-sm-6">
                             日程提醒方式<asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem>不提醒</asp:ListItem>
-                                <asp:ListItem>短信提醒</asp:ListItem>
-                                <asp:ListItem>邮件提醒</asp:ListItem>
+                                <asp:ListItem>&nbsp;不提醒&nbsp;</asp:ListItem>
+                                <asp:ListItem>&nbsp;短信提醒&nbsp;</asp:ListItem>
+                                <asp:ListItem>&nbsp;邮件提醒&nbsp;</asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
-
-                        <div class="form-group col-md-12 col-sm-6">
-                            <asp:Label CssClass="control-label" ID="lbl_lCountry" runat="server" Text="Country"></asp:Label>
-                            <asp:DropDownList CssClass="form-control mt-05" ID="ddlCountry" runat="server" ValidationGroup="Personal">
-                            </asp:DropDownList>
-                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="container-fluid mt">
-                <div class="row">
-                    <div class="form-group float-right">
-                        <asp:Button ID="btnUpdatePersonal" runat="server" class="btn btn-success" Text="Update" ValidationGroup="Personal" />
-                        <asp:Button ID="btnClearPersonal" runat="server" CausesValidation="False" class="btn btn-success" Text="Clear" />
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="panel panel-default">
@@ -131,39 +145,80 @@
             <div class="container-fluid mt">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="form-group col-md-12 col-sm-6">
+                        <div class="col-sm-6 form-group">
                             相关客户
-                            <div>
-                                <asp:TextBox ID="TextBox2" runat="server" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <img class="auto-style1" src="images/icon/Search.png" />
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-12 col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
                             相关文档
-                            <div>
-                                <asp:TextBox ID="TextBox1" runat="server" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <img class="auto-style1" src="images/icon/Search.png" />
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-12 col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            相关客户
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
                             相关项目
-                            <div>
-                                <asp:TextBox ID="TextBox7" runat="server" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <img class="auto-style1" src="images/icon/Search.png" />
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-12 col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
                             相关项目任务
-                            <div>
-                                <asp:TextBox ID="TextBox8" runat="server" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <img class="auto-style1" src="images/icon/Search.png" />
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-12 col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
                             相关流程
-                            <div>
-                                <asp:TextBox ID="TextBox9" runat="server" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
-                                <img class="auto-style1" src="images/icon/Search.png" />
+                            <div class="input-group">
+                                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                             </div>
                         </div>
                     </div>
