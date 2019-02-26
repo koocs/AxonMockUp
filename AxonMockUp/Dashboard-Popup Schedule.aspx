@@ -65,32 +65,32 @@
             <div class="container-fluid mt">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="form-group col-md-12 col-sm-6">
+                        <div class="form-group col-md-12 col-sm-12">
                             <asp:Label ID="lbl_lUserID" runat="server" Text="日程类型"></asp:Label>
                             <asp:DropDownList CssClass="form-control mt-05" ID="DropDownList1" runat="server" ValidationGroup="Personal">
                             </asp:DropDownList>
                         </div>
 
-                        <div class="form-group col-md-12 col-sm-6">
+                        <div class="form-group col-md-12 col-sm-12">
                             标题<asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control mt-05" MaxLength="200"></asp:TextBox>
                         </div>
 
-                        <div class="form-group col-md-12 col-sm-6">
-                            内容<asp:TextBox ID="txtLastName" runat="server" CssClass="form-control mt-05" MaxLength="100" Height="77px" Rows="2" TextMode="MultiLine" Width="552px"></asp:TextBox>
+                        <div class="form-group col-md-12 col-sm-12">
+                            内容<asp:TextBox ID="txtLastName" runat="server" CssClass="form-control mt-05" MaxLength="100" Height="77px" Rows="2" TextMode="MultiLine"></asp:TextBox>
                         </div>
 
-                        <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
                             接收人<asp:Label CssClass="form-control mt-05" ID="lblCurrency" runat="server"></asp:Label>
                         </div>
 
-                        <div class="form-group col-md-12 col-sm-6">
+                        <div class="form-group col-md-12 col-sm-12">
                             紧急程度<asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
                                 <asp:ListItem>&nbsp;一般&nbsp;</asp:ListItem>
                                 <asp:ListItem>&nbsp;重要&nbsp;</asp:ListItem>
                                 <asp:ListItem>&nbsp;紧急&nbsp;</asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             开始日期, 时间
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -107,7 +107,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             结束日期, 时间
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -145,7 +145,7 @@
             <div class="container-fluid mt">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关客户
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关文档
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关客户
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关项目
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -197,7 +197,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关项目任务
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 form-group">
+                        <div class="col-sm-12 form-group">
                             相关流程
                             <div class="input-group">
                                 <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" MaxLength="20" ValidationGroup="Personal"></asp:TextBox>
