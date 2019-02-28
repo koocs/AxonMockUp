@@ -142,21 +142,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Add_Employee.aspx" />
+    <Content Include="Add_Vendor.aspx" />
+    <Content Include="Add_Vendor_Internal.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Dashboard-Popup Schedule.aspx" />
-    <Content Include="images\icon\calendar.png" />
-    <Content Include="images\icon\Search.png" />
-    <Content Include="MyPersonalDetails.aspx" />
     <Content Include="css\custom.css" />
+    <Content Include="css\fullcalendar.css" />
+    <Content Include="css\fullcalendar.print.css" />
     <Content Include="css\jquery\jquery-cms.css" />
+    <Content Include="css\login_B.css" />
     <Content Include="css\numoptions_master.css" />
     <Content Include="css\template.css" />
+    <Content Include="dashboard_vendor.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="images\brake-disc.jpg" />
+    <Content Include="images\cat-5-e.jpg" />
+    <Content Include="images\profile.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Login_Vendor.aspx" />
+    <Content Include="OrganizationChart.aspx" />
+    <Content Include="OrganizationChart_Create.aspx" />
+    <Content Include="Reports\AQ.aspx" />
+    <Content Include="Reports\Inv_Claims_Rec_App.aspx" />
+    <Content Include="Reports\PO_Issued.aspx" />
+    <Content Include="Reports\RFQ.aspx" />
     <Content Include="dist\css\sb-admin-2.css" />
     <Content Include="dist\js\sb-admin-2.js" />
     <Content Include="favicon.ico" />
@@ -174,16 +188,20 @@
     <Content Include="images\lang_eng.jpg" />
     <Content Include="images\lang_ind.jpg" />
     <Content Include="MasterPage\axon.Master" />
-    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\calendar.js" />
+    <Content Include="Scripts\fullcalendar.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui.custom.min.js" />
     <Content Include="Scripts\jquery\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="Scripts\lang-all.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -211,10 +229,32 @@
     <Content Include="vendor\menuCss\metisMenu.min.css" />
     <Content Include="vendor\MenuJs\metisMenu.min.js" />
     <Content Include="vendor\morrisjs\morris.css" />
+    <Content Include="Vendor_Listing_Internal.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Employee.aspx.designer.vb">
+      <DependentUpon>Add_Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Employee.aspx.vb">
+      <DependentUpon>Add_Employee.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Add_Vendor.aspx.designer.vb">
+      <DependentUpon>Add_Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Vendor.aspx.vb">
+      <DependentUpon>Add_Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Add_Vendor_Internal.aspx.designer.vb">
+      <DependentUpon>Add_Vendor_Internal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Vendor_Internal.aspx.vb">
+      <DependentUpon>Add_Vendor_Internal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
@@ -232,20 +272,75 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Dashboard-Popup Schedule.aspx.vb">
-      <DependentUpon>Dashboard-Popup Schedule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="dashboard_vendor.aspx.designer.vb">
+      <DependentUpon>dashboard_vendor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MyPersonalDetails.aspx.vb">
-      <DependentUpon>MyPersonalDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="dashboard_vendor.aspx.vb">
+      <DependentUpon>dashboard_vendor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login_Vendor.aspx.designer.vb">
+      <DependentUpon>Login_Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Vendor.aspx.vb">
+      <DependentUpon>Login_Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationChart.aspx.designer.vb">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationChart.aspx.vb">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationChart_Create.aspx.designer.vb">
+      <DependentUpon>OrganizationChart_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationChart_Create.aspx.vb">
+      <DependentUpon>OrganizationChart_Create.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\AQ.aspx.designer.vb">
+      <DependentUpon>AQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AQ.aspx.vb">
+      <DependentUpon>AQ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Inv_Claims_Rec_App.aspx.designer.vb">
+      <DependentUpon>Inv_Claims_Rec_App.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inv_Claims_Rec_App.aspx.vb">
+      <DependentUpon>Inv_Claims_Rec_App.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PO_Issued.aspx.designer.vb">
+      <DependentUpon>PO_Issued.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PO_Issued.aspx.vb">
+      <DependentUpon>PO_Issued.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\RFQ.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RFQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RFQ.aspx.designer.vb">
+      <DependentUpon>RFQ.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -284,6 +379,13 @@
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Vendor_Listing_Internal.aspx.designer.vb">
+      <DependentUpon>Vendor_Listing_Internal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor_Listing_Internal.aspx.vb">
+      <DependentUpon>Vendor_Listing_Internal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,13 +399,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -339,7 +434,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CRM\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

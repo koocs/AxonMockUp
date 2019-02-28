@@ -75,13 +75,13 @@ Public Class axon
     Private Sub subLang()
 
         If Session("gc_strSessionLang") = "1" Then
-            Me.lblWelcome.Text = "Welcome "
+            Me.lblWelcome.Text = ""
             Me.lblUserID.Text = "Developer"
             Me.lnkbtnLogout.Text = "<i class='fa fa-sign-out fa-fw'></i>Logout"
 
             Me.lnkbtnMyDetail.Text = "<i class='fa fa-user fa-fw'></i>My Details"
         Else
-            Me.lblWelcome.Text = "欢迎 "
+            Me.lblWelcome.Text = ""
             Me.lnkbtnLogout.Text = "<i class='fa fa-sign-out fa-fw'></i>登出"
             Me.lblUserID.Text = "开发人员"
             Me.lnkbtnMyDetail.Text = "<i class='fa fa-user fa-fw'></i>我的个人资料"
@@ -277,6 +277,7 @@ Public Class axon
         Dim dtMenu As DataTable = New DataTable
 
         Dim strSQL As String = "prc_User_sel#Menu 1, " & Session("gc_strSessionLang")
+        'Dim strSQL As String = "prc_User_sel#Menu_Vendor 1, " & Session("gc_strSessionLang")
 
         'dtMenu = fncUser_Sel_Menu(MyBase.uCtx.UserGroupUID, Session(oiConstant.gc_strSessionLang), strErrMsg)
         dtMenu = fncQueryDb(DBConnection, strSQL, strErrMsg)

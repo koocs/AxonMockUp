@@ -19,8 +19,8 @@
     <link href="../css/numoptions_master.css" rel="stylesheet" type="text/css" />--%>
 
     <!-- Bootstrap Core CSS -->
+    <%--<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">--%>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="../vendor/menuCss/metisMenu.min.css" rel="stylesheet">
 
@@ -32,6 +32,11 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <%--calendar--%>
+
+    <link href='https://fullcalendar.io/js/fullcalendar-3.2.0/fullcalendar.min.css' rel='stylesheet' />
+    <link href='https://fullcalendar.io/js/fullcalendar-3.2.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
 
     <script src="../vendor/jquery/jquery.min.js"></script>
 
@@ -54,13 +59,117 @@
     </asp:ContentPlaceHolder>
 
     <style type="text/css">
-        body{
-            font-family: SimHei;
-            Font-Size: 15px;
+        #Organizationchart table {
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        #Organizationchart tr td {
+            line-height: 15px;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .google-visualization--orgchart-node-medium {
+            font-size: 13px;
+        }
+
+        .vd-rfq-div {
+            background-color: #AB47BC;
+            border-right: solid;
+            border-right-color: aliceblue;
+            border-left: solid;
+            border-left-color: aliceblue;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+        }
+
+        .vd-rfq-his-div {
+            background-color: #F06292;
+            border-left: solid;
+            border-left-color: aliceblue;
+            border-right: solid;
+            border-right-color: aliceblue;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+        }
+
+        .tab-content > .active {
+            display: block;
+        }
+
+        .fc-widget-header {
+            background-color: #FF0266;
+        }
+
+        .txt-color-white {
+            color: aliceblue;
+        }
+
+        .txt-color-pink {
+            color: #FF0266;
+        }
+
+        .txt-cus-size-sm {
+            font-size: 0.85em;
+        }
+
+        .txt-cus-size-lg {
+            font-size: 1.5em;
+        }
+
+        .col-color-green {
+            background-color: #90ee02;
+            min-height: 100px;
+            border-right: solid;
+            border-right-color: aliceblue;
+        }
+
+        .col-color-blue {
+            background-color: #29B6F6;
+            min-height: 100px;
+            border-right: solid;
+            border-right-color: aliceblue;
+            border-bottom: solid;
+            border-bottom-color: aliceblue;
+        }
+
+        .col-color-red {
+            background-color: #ee0290;
+            min-height: 100px;
+            border-right: solid;
+            border-right-color: aliceblue;
+        }
+
+        .col-color-orange {
+            background-color: #ff9e22;
+            min-height: 100px;
+            border-right: solid;
+            border-right-color: aliceblue;
+            border-bottom: solid;
+            border-bottom-color: aliceblue;
+        }
+
+        .col-color-Cyan {
+            background-color: #0097A7;
+            min-height: 100px;
+            border-bottom: solid;
+            border-bottom-color: aliceblue;
+        }
+
+        .col-color-Gray {
+            background-color: #9E9E9E;
+            min-height: 100px;
         }
 
         i {
-            margin-right:10px;
+            margin-right: 10px;
         }
 
         .pull-bottom {
@@ -345,12 +454,71 @@
                     </li>
 
                     <li class="text-muted">
-                        <asp:Label ID="lblWelcome" CssClass="fontSizeMedium" runat="server" Text="Welcome, "></asp:Label>
+                        <asp:Label ID="lblWelcome" CssClass="fontSizeMedium" runat="server" Text=""></asp:Label>
                         <asp:Label ID="lblUserID" CssClass="fontSizeMedium" runat="server"></asp:Label>
                     </li>
 
                     <!-- /.dropdown -->
                     <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i>New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i>3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i>Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i>New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i>Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-alerts -->
+                    </li>
                     <li class="dropdown ">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw fontSizeSmall"></i><i class="fa fa-caret-down fontSizeSmall"></i>
@@ -395,10 +563,55 @@
         <!-- /#wrapper -->
     </form>
 
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+
+    <%--<script type="text/javascript" src='../Scripts/fullcalendar.js'></script>--%>
+    <script type="text/javascript" src='https://fullcalendar.io/js/fullcalendar-3.2.0/fullcalendar.min.js'></script>
+    <script type="text/javascript" src="https://fullcalendar.io/js/fullcalendar-3.2.0/locale-all.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+
+
     <script type="text/javascript">
 
         $j = jQuery.noConflict();
         $j(document).ready(function ($) {
+
+            $('#toggle-tabs a').click(function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $('#calendar').fullCalendar({
+
+                events: [
+                    {
+                        title: '项目一',
+                        start: '2019-02-26T13:30:00-0400',
+                        end: '2019-02-26T13:30:00-0400',
+                        color: '#ee0290'
+                    },
+                    {
+                        title: '项目一',
+                        start: '2019-02-27T14:30:00-0400',
+                        end: '2019-02-27T14:30:00-0400',
+                        color: '#fa8100'
+                    },
+                    {
+                        title: '项目一',
+                        start: '2019-02-26T16:30:00-0400',
+                        end: '2019-02-26T16:30:00-0400',
+                        color: '#75e900'
+                    }
+                ],
+                locale: 'zh-cn'
+
+            });
 
             var lastWidth;
 
@@ -487,10 +700,9 @@
 
     </script>
 
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js'></script>
     <%--<script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.4.0/chartjs-plugin-streaming.min.js"></script>--%>
 
     <!-- Metis Menu Plugin JavaScript -->

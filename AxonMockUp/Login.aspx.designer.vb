@@ -11,185 +11,140 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class _Default
+Partial Public Class Login
     
     '''<summary>
-    '''btnUpdatePersonal control.
+    '''Head1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUpdatePersonal As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
     
     '''<summary>
-    '''btnClearPersonal control.
+    '''frm control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnClearPersonal As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents frm As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Label1 control.
+    '''lang control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lang As Global.System.Web.UI.HtmlControls.HtmlSelect
     
     '''<summary>
-    '''lbl_lUserID control.
+    '''imgLogo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbl_lUserID As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents imgLogo As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
-    '''DropDownList1 control.
+    '''lblSystemLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lblSystemLogin As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txtFirstName control.
+    '''lblCaption control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFirstName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblCaption As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txtLastName control.
+    '''lblUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblUsername As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lblCurrency control.
+    '''txtUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblCurrency As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtUsername As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RadioButtonList1 control.
+    '''lblPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''TextBox8 control.
+    '''txtPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox7 control.
+    '''lblErrMsg control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblErrMsg As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''TextBox9 control.
+    '''btnSubmit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''TextBox10 control.
+    '''btnClear control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox10 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnClear As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''RadioButtonList2 control.
+    '''hfVeriCode control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents hfVeriCode As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
-    '''lblOverviewIncome control.
+    '''hf control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblOverviewIncome As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''TextBox2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''TextBox1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''TextBox4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''TextBox5 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''TextBox6 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents hf As Global.System.Web.UI.WebControls.HiddenField
 End Class
